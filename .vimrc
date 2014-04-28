@@ -26,6 +26,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tomasr/molokai'
 Bundle 'w0ng/vim-hybrid'
 Bundle 'groenewege/vim-less'
+Bundle 'kana/vim-fakeclip'
 
 " from vim-scripts repos
 Bundle 'quickrun.vim'
