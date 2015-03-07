@@ -108,6 +108,12 @@ alias bi='bundle install --path vendor/bundler'
 alias rebash='source ~/.bashrc'
 
 #--------------------------------------------
+# git completion
+# https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
+#--------------------------------------------
+source ~/.git-completion.bash
+
+#--------------------------------------------
 # git ignored
 #--------------------------------------------
 source ~/.bash_git_ignored

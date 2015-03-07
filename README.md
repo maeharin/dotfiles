@@ -12,6 +12,7 @@ $ ln -s dotfiles/.bash_logout
 $ ln -s dotfiles/.vimrc
 $ ln -s dotfiles/.vim
 $ ln -s dotfiles/.tmux.conf
+$ ln -s dotfiles/.git-completion.bash
 
 # 3. (optional) add your own .bash_ignored
 $ vim dotfiles/.bash_git_ignored
