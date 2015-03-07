@@ -9,7 +9,7 @@ umask 002 # 664
 # env_path
 #--------------------------------------------
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH"
+export PATH="/usr/local/bin:$HOME/bin:$PATH"
 
 #--------------------------------------------
 # env_others
