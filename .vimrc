@@ -1,45 +1,51 @@
 "------------------------------------------------
-" Vundle
-" https://github.com/gmarik/vundle 
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+" NeoBundle
 "------------------------------------------------
-" required! 
-set nocompatible
-filetype off
-set rtp+=~/.vim/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+if has('vim_starting')
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
 
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
 " from original repos on github
-Bundle 'tpope/vim-rails.git'
-Bundle 'msanders/snipmate.vim.git'
-Bundle 'pangloss/vim-javascript'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tomasr/molokai'
-Bundle 'w0ng/vim-hybrid'
-Bundle 'groenewege/vim-less'
-Bundle 'kana/vim-fakeclip'
-Bundle 'derekwyatt/vim-scala'
+NeoBundle 'tpope/vim-rails.git'
+NeoBundle 'msanders/snipmate.vim.git'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'groenewege/vim-less'
+NeoBundle 'kana/vim-fakeclip'
+NeoBundle 'derekwyatt/vim-scala'
 
 " from vim-scripts repos
-Bundle 'quickrun.vim'
-Bundle 'JavaScript-syntax'
-Bundle 'Markdown'
-Bundle 'Zenburn'
-Bundle 'Align'
+NeoBundle 'quickrun.vim'
+NeoBundle 'JavaScript-syntax'
+NeoBundle 'Markdown'
+NeoBundle 'Zenburn'
+NeoBundle 'Align'
 
-" from non github repos
+call neobundle#end()
 
-" required! 
+" Required:
 filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
 
 "--------------------
 " base
