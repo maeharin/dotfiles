@@ -31,6 +31,19 @@ NeoBundle 'groenewege/vim-less'
 NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'derekwyatt/vim-scala'
 
+"
+" ctrlp: ファイル検索
+"
+NeoBundle 'kien/ctrlp.vim'
+" ag入ってたらagで検索させる
+" ついでにキャッシュファイルからの検索もさせない
+if executable('ag')
+  let g:ctrlp_use_caching = 0
+  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup -g ""'
+endif
+" ワーキングパスモード設定
+let g:ctrlp_working_path_mode = 'w'
+
 " from vim-scripts repos
 NeoBundle 'quickrun.vim'
 NeoBundle 'JavaScript-syntax'
