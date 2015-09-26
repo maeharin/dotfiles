@@ -25,8 +25,8 @@ $ cd dotfiles
 $ git submodule init
 $ git submodule update
 
-# 5. vundle install
+# 5. neo bundle install
 $ vim
-:BundleInstall
+:NeoBundleInstall
 ```
 
