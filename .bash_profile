@@ -108,6 +108,14 @@ alias bi='bundle install --path vendor/bundler'
 alias rebash='source ~/.bashrc'
 
 #--------------------------------------------
+# enhancd
+#--------------------------------------------
+ENHANCD_COMMAND=eh; export ENHANCD_COMMAND
+if [ -f ~/.enhancd/enhancd.sh ]; then
+    source ~/.enhancd/enhancd.sh
+fi
+
+#--------------------------------------------
 # git completion
 # https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
 #--------------------------------------------
