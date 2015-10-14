@@ -1,3 +1,4 @@
 .bash_git_ignored
 .vim/bundle/*
 !.vim/bundle/neobundle.vim
+.netrwhist

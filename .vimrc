@@ -44,6 +44,11 @@ endif
 " ワーキングパスモード設定
 let g:ctrlp_working_path_mode = 'w'
 
+"
+" vim-tags: ctags
+"
+NeoBundle 'szw/vim-tags'
+
 " from vim-scripts repos
 NeoBundle 'quickrun.vim'
 NeoBundle 'JavaScript-syntax'
@@ -66,6 +71,22 @@ NeoBundleCheck
 set nocompatible " viとの互換性をとらない(vimの独自拡張機能を使う為)
 imap <F11> <nop> "インサートモードでのF11を無効化
 set pastetoggle=<F11> "ノーマルモードでF11を押すとペーストモード切り替え
+
+"--------------------
+" original function
+"--------------------
+
+"
+" カーソルの下のwordをg*でgrepできる。
+" by tky
+"
+function! s:grep_fiels()
+  let a:word = expand("<cword>")
+  call ctrlsf#Search(a:word)
+endfunction
+command! -nargs=0 GrepAllFiles call s:grep_fiels()
+"nnoremap <C-g> :GrepAllFiles<CR>
+nnoremap g* :GrepAllFiles<CR>
 
 "--------------------
 " edit
