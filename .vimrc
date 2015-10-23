@@ -45,6 +45,13 @@ endif
 let g:ctrlp_working_path_mode = 'w'
 
 "
+" ctrlsf: agの検索結果を表示
+"
+NeoBundle 'dyng/ctrlsf.vim'
+" 検索結果を閉じない
+let g:ctrlsf_auto_close = 0
+
+"
 " vim-tags: ctags
 "
 NeoBundle 'szw/vim-tags'
