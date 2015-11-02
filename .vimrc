@@ -247,6 +247,8 @@ let file_name = expand("%")
 if has('vim_starting') &&  file_name == ""
     autocmd VimEnter * NERDTree ./
 endif
+nmap ,f :NERDTreeFind<CR>
+nmap ,t :NERDTreeToggle<CR>
 
 " align
 let g:Align_xstrlen=3
