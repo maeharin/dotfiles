@@ -1,3 +1,8 @@
+" <leader>を変更（デフォルトは\）
+" http://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc-file
+" http://postd.cc/how-to-boost-your-vim-productivity/
+let mapleader = ","
+
 "------------------------------------------------
 " NeoBundle
 "------------------------------------------------
@@ -43,6 +48,9 @@ if executable('ag')
 endif
 " ワーキングパスモード設定
 let g:ctrlp_working_path_mode = 'w'
+" ショートカット
+" http://www.omh.cc/blog/2012/dec/6/vim-automatically-insert-words-ctrlp/
+nmap <leader>lw :CtrlP<CR><C-\>w
 
 "
 " ctrlsf: agの検索結果を表示
@@ -247,8 +255,8 @@ let file_name = expand("%")
 if has('vim_starting') &&  file_name == ""
     autocmd VimEnter * NERDTree ./
 endif
-nmap ,f :NERDTreeFind<CR>
-nmap ,t :NERDTreeToggle<CR>
+nmap <leader>f :NERDTreeFind<CR>
+nmap <leader>t :NERDTreeToggle<CR>
 
 " align
 let g:Align_xstrlen=3
