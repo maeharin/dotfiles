@@ -48,9 +48,9 @@ if executable('ag')
 endif
 " ワーキングパスモード設定
 let g:ctrlp_working_path_mode = 'w'
-" ショートカット
+" ショートカット。カーソルを当てた文字列をctrlpに与える
 " http://www.omh.cc/blog/2012/dec/6/vim-automatically-insert-words-ctrlp/
-nmap <leader>lw :CtrlP<CR><C-\>w
+nmap <leader>p :CtrlP<CR><C-\>w
 
 "
 " ctrlsf: agの検索結果を表示
