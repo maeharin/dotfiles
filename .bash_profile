@@ -122,6 +122,12 @@ fi
 source ~/.git-completion.bash
 
 #--------------------------------------------
+# gibo completion
+# https://github.com/simonwhitaker/gibo
+#--------------------------------------------
+source ~/.gibo-completion.bash
+
+#--------------------------------------------
 # git ignored
 #--------------------------------------------
 source ~/.bash_git_ignored
