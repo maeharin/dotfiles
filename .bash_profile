@@ -106,6 +106,7 @@ alias tree='tree -aF --dirsfirst'
 alias dud='du -sh ./* | sort -nr'
 alias bi='bundle install --path vendor/bundler'
 alias rebash='source ~/.bashrc'
+alias ag='ag -u'
 
 #--------------------------------------------
 # enhancd

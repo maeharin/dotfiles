@@ -121,6 +121,11 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+
+"tab,space表示
+set list
+set listchars=eol:$,tab:>;,extends:<
+
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
