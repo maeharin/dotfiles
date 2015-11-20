@@ -65,6 +65,11 @@ let g:ctrlsf_auto_close = 0
 "
 NeoBundle 'szw/vim-tags'
 
+"
+" vimでgit blameなど
+"
+NeoBundle 'tpope/vim-fugitive'
+
 " from vim-scripts repos
 NeoBundle 'quickrun.vim'
 NeoBundle 'JavaScript-syntax'
