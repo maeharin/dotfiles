@@ -18,6 +18,7 @@ export PATH="/usr/local/bin:$HOME/bin:$PATH"
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
+export HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
 export EDITOR=vim
 export VISUAL=vim
 
