@@ -117,18 +117,6 @@ if [ -f ~/.enhancd/enhancd.sh ]; then
 fi
 
 #--------------------------------------------
-# git completion
-# https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
-#--------------------------------------------
-source ~/.git-completion.bash
-
-#--------------------------------------------
-# gibo completion
-# https://github.com/simonwhitaker/gibo
-#--------------------------------------------
-source ~/.gibo-completion.bash
-
-#--------------------------------------------
 # git ignored
 #--------------------------------------------
 source ~/.bash_git_ignored
