@@ -71,10 +71,16 @@ NeoBundle 'szw/vim-tags'
 "
 NeoBundle 'tpope/vim-fugitive'
 
+"
+" markdown
+"
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_disabled = 1
+
 " from vim-scripts repos
 NeoBundle 'quickrun.vim'
 NeoBundle 'JavaScript-syntax'
-NeoBundle 'Markdown'
 NeoBundle 'Zenburn'
 NeoBundle 'Align'
 
