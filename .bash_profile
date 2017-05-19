@@ -111,9 +111,13 @@ alias rebash='source ~/.bashrc'
 #--------------------------------------------
 # enhancd
 #--------------------------------------------
+# cdコマンドではなくehコマンドにする
 ENHANCD_COMMAND=eh; export ENHANCD_COMMAND
-if [ -f ~/.enhancd/enhancd.sh ]; then
-    source ~/.enhancd/enhancd.sh
+# filterにはpecoを使う
+ENHANCD_FILTER=peco; export ENHANCD_FILTER
+# enhancd有効化
+if [ -f ~/.enhancd/init.sh ]; then
+    source ~/.enhancd/init.sh
 fi
 
 #--------------------------------------------
