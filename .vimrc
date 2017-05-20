@@ -140,6 +140,7 @@ set list
 set listchars=eol:$,tab:>;,extends:<
 
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype vue setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype less setlocal ts=2 sts=2 sw=2
