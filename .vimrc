@@ -36,6 +36,7 @@ NeoBundle 'groenewege/vim-less'
 NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'posva/vim-vue'
 
 "
 " ctrlp: ファイル検索
