@@ -1,0 +1,47 @@
+#!/bin/bash
+
+DIR_NAME="hello-go-web"
+
+mkdir ${DIR_NAME} && cd ${DIR_NAME}
+
+cat <<"EOF" > main.go
+package main
+
+import (
+    "fmt"
+    "log"
+    "net/http"
+)
+
+func handleRoot(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprint(w, "hello world!")
+}
+
+func main() {
+    http.HandleFunc("/", handleRoot)
+
+    log.Println("start http://localhost:8080")
+
+    err := http.ListenAndServe(":8080", nil)
+
+    if err != nil {
+        log.Fatal("error", err)
+    }
+}
+EOF
+
+cat <<"EOF" > README.md
+```
+go run main.go
+```
+EOF
+
+cat <<EOF
+cd ${DIR_NAME}
+
+vscodeで開く:
+code .
+
+実行する:
+go run main.go
+EOF

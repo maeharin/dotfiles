@@ -1,0 +1,86 @@
+#!/bin/bash
+
+DIR_NAME="hello-koa-typescript"
+
+mkdir ${DIR_NAME} && cd ${DIR_NAME}
+
+cat <<"EOF" > tsconfig.json
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2017",
+        "noImplicitAny": true,
+        "outDir": "./dist",
+        "sourceMap": true
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}
+EOF
+
+cat <<"EOF" > package.json
+{
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "watch": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' ./src/server.ts"
+  }
+}
+EOF
+
+yarn add koa koa-router
+yarn add --dev typescript ts-node nodemon @types/koa @types/koa-router
+
+mkdir src 
+cat <<"EOF" > src/server.ts
+import * as Koa from 'koa';
+import * as Router from 'koa-router';
+
+const app = new Koa();
+const router = new Router();
+
+interface Post {
+  id: number,
+  title: string,
+  body: string
+}
+
+const posts: Post[] = [
+  { id: 1, title: 'タイトル1', body: 'ボディー1' },
+  { id: 2, title: 'タイトル2', body: 'ボディー2' },
+  { id: 3, title: 'タイトル3', body: 'ボディー3' }
+]
+
+router
+  .get('/', async (ctx, next) => {
+    ctx.body = 'hello world'
+  })
+  .get('/posts', async (ctx, next) => {
+    ctx.body = posts
+  })
+  .get('/posts/:id', async (ctx, next) => {
+    ctx.body = posts.find(p => p.id === Number(ctx.params['id']))
+  })
+
+app
+  .use(router.routes())
+  .use(router.allowedMethods())
+
+app.listen(8080);
+
+console.log('start http://localhost:8080');
+EOF
+
+
+cat <<EOF
+cd ${DIR_NAME}
+
+vscodeで開く:
+code .
+
+実行する：
+yarn run start
+
+実行する（ファイル変更監視）:
+yarn run watch
+EOF
