@@ -32,11 +32,24 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'groenewege/vim-less'
 NeoBundle 'kana/vim-fakeclip'
-NeoBundle 'derekwyatt/vim-scala'
+
+
+"
+" vim-go
+"
 NeoBundle 'fatih/vim-go'
-NeoBundle 'posva/vim-vue'
+let g:go_fmt_command = "goimports"
+
+"
+"  neocomplete(補完)
+"
+NeoBundle 'Shougo/neocomplete.vim'
+"起動時に有効
+let g:neocomplete#enable_at_startup = 1
+" enterで自動選択
+" http://blog.basyura.org/entry/2013/08/17/154700
+inoremap <expr><CR>   pumvisible() ? "\<C-n>" . neocomplete#close_popup()  : "<CR>"
 
 "
 " ctrlp: ファイル検索
